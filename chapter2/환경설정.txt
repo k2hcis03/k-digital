@@ -1,0 +1,45 @@
+우분투 환경
+sudo apt-get install git bc
+sudo apt-get install make
+sudo apt-get install gcc
+sudo apt-get install flex
+sudo apt-get install bison
+sudo apt-get install libncurses-dev
+sudo apt-get install libssl-dev
+sudo apt-get install sshpas
+sudo apt-get install gcc-arm-linux-gnueabihf 
+
+커널 다운로드
+git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux 
+
+.bashrc에 2줄 추가
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export ARCH=arm
+source ~/.bashrc
+
+우분투에서 커널 컴파일
+make mrproper
+KERNEL=kernel7l
+make bcm2711_defconfig 
+make -j4 zImage modules dtbs 
+sudo make modules_install
+
+sudo mkdir /mnt/fat32 
+sudo mkdir /mnt/ext4
+
+컴파일 설정 및 SD 카드 복사
+sudo mount /dev/sdb1 /mnt/fat32
+sudo mount /dev/sdb2 /mnt/ext4
+sudo cp arch/arm/boot/zImage /mnt/fat32/kernel_rpi_4_b.img
+sudo cp arch/arm/boot/dts/*.dtb /mnt/fat32/
+sudo cp arch/arm/boot/dts/overlays/*.dtb* /mnt/fat32/overlays/
+sudo cp arch/arm/boot/dts/overlays/README  /mnt/fat32/overlays/
+sudo make INSTALL_MOD_PATH=/mnt/ext4/ modules_install
+
+enable_uart=1
+kernel=kernel_rpi_4_b.img
+device_tree=bcm2711-rpi-4-b.dtb
+dtoverlay=pi3-disable-bt
+
+sudo umount /mnt/fat32 
+sudo umount /mnt/ext4
