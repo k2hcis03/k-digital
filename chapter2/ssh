@@ -1,0 +1,19 @@
+Host CM4
+  HostName 192.168.1.200
+  User pi
+  ForwardAgent yes
+
+Host 3-B-Pluse
+  HostName 192.168.1.100
+  User pi
+  ForwardAgent yes
+
+Host 4-B-120
+  HostName 192.168.1.120
+  User pi
+  ForwardAgent yes
+
+Host 4-B-110
+  HostName 192.168.1.110
+  User pi
+  ForwardAgent yes
