@@ -36,6 +36,7 @@ sudo cp arch/arm/boot/dts/overlays/*.dtb* /mnt/fat32/overlays/
 sudo cp arch/arm/boot/dts/overlays/README  /mnt/fat32/overlays/
 sudo make INSTALL_MOD_PATH=/mnt/ext4/ modules_install
 
+/mnt/fat32/config.txt파일 수정
 enable_uart=1
 kernel=kernel_rpi_4_b.img
 device_tree=bcm2711-rpi-4-b.dtb
