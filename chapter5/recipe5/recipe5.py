@@ -42,7 +42,7 @@ def main():
         data.size = 10
         GET_DATA = _ioctl._IOR(IOCTL_MAGIC, 3, ctypes.sizeof(data))
         fcntl.ioctl(dev,GET_DATA,data)
-        print("GET_DATA = {}".format(data.buffer[0]))
+        print("GET_DATA = {}".format(data.data))
         os.close(dev)
     except OSError as e:
         print(e.errno, "Fail to open device file: /dev/recipedev.")
