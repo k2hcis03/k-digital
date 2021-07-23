@@ -1,5 +1,5 @@
 HOME=/home/k2h
-obj-m += my_first_modules.o
+obj-m += my_first_module.o
 
 KERNEL_DIR ?= $(HOME)/linux
 
@@ -14,5 +14,5 @@ clean:
 		M=$(PWD) clean
 
 deploy:
-	sshpass -praspberry scp -o StrictHostKeyChecking=no *.ko pi@192.168.1.100:/home/pi/module-test/
+	sshpass -praspberry scp -o StrictHostKeyChecking=no *.ko pi@192.168.1.120:/home/pi/module-test/
 
