@@ -105,7 +105,7 @@ static struct platform_driver recipe_platform_driver = {
 	.probe = recipe_probe,
 	.remove = recipe_remove,
 	.driver = {
-		.name = "recipe5-1",
+		.name = "recipe5_1",
 		.of_match_table = recipe_of_ids,
 		.owner = THIS_MODULE,
 	}
