@@ -1,5 +1,5 @@
 HOME=/home/k2h
-obj-m += recipe8-1.o
+obj-m += recipe8_1.o
 
 KERNEL_DIR ?= $(HOME)/linux
 
