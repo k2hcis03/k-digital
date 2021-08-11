@@ -6,7 +6,7 @@ sudo apt-get install flex
 sudo apt-get install bison
 sudo apt-get install libncurses-dev
 sudo apt-get install libssl-dev
-sudo apt-get install sshpas
+sudo apt-get install sshpass
 sudo apt-get install gcc-arm-linux-gnueabihf 
 
 커널 다운로드
