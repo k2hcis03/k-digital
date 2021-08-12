@@ -94,7 +94,7 @@ static int __exit recipe_remove(struct platform_device *pdev)
 
 /* Declare a list of devices supported by the driver */
 static const struct of_device_id recipe_of_ids[] = {
-	{ .compatible = "brcm,recipe5-1"},
+	{ .compatible = "brcm,recipe5_1"},
 	{},
 };
 
