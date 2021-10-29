@@ -42,5 +42,8 @@ kernel=kernel_rpi_4_b.img
 device_tree=bcm2711-rpi-4-b.dtb
 dtoverlay=pi3-disable-bt
 
+/mnt/fat32/cmdline.txt파일 수정
+마지막에 스페이스로 공간 확보 후, ip=192.168.1.100
+
 sudo umount /mnt/fat32 
 sudo umount /mnt/ext4
