@@ -45,5 +45,7 @@ dtoverlay=pi3-disable-bt
 /mnt/fat32/cmdline.txt파일 수정
 마지막에 스페이스로 공간 확보 후, ip=192.168.1.100
 
+윈도우에서 SD카드 연결후, 빈파일(확장자 없이) ssh파일 생성
+
 sudo umount /mnt/fat32 
 sudo umount /mnt/ext4
