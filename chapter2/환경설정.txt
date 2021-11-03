@@ -28,6 +28,7 @@ sudo mkdir /mnt/fat32
 sudo mkdir /mnt/ext4
 
 컴파일 설정 및 SD 카드 복사
+lsblk 명령어로 sdb인지 확인
 sudo mount /dev/sdb1 /mnt/fat32
 sudo mount /dev/sdb2 /mnt/ext4
 sudo cp arch/arm/boot/zImage /mnt/fat32/kernel_rpi_4_b.img
@@ -47,5 +48,6 @@ dtoverlay=pi3-disable-bt
 
 윈도우에서 SD카드 연결후, 빈파일(확장자 없이) ssh파일 생성
 
+sync
 sudo umount /mnt/fat32 
 sudo umount /mnt/ext4
