@@ -18,6 +18,7 @@ export ARCH=arm
 source ~/.bashrc
 
 우분투에서 커널 컴파일
+cd ./linux
 make mrproper
 KERNEL=kernel7l
 make bcm2711_defconfig 
