@@ -10,7 +10,7 @@ sudo apt-get install sshpass
 sudo apt-get install gcc-arm-linux-gnueabihf 
 
 커널 다운로드
-git clone --depth=1 -b rpi-5.10.y https://github.com/raspberrypi/linux 
+git clone --depth=1 -b rpi-5.15.y https://github.com/raspberrypi/linux 
 
 .bashrc에 2줄 추가
 export CROSS_COMPILE=arm-linux-gnueabihf-
